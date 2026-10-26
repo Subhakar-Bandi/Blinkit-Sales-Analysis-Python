@@ -1,44 +1,10 @@
-# Blinkit-Sales-Analysis-Python
-Python-based Blinkit sales analysis project using Pandas, NumPy, and Matplotlib to clean data, calculate KPIs, visualize sales patterns, and derive business insights
 # Blinkit Sales Analysis using Python
 
 Exploratory data analysis of Blinkit retail sales data using Python, Pandas and Matplotlib. The project cleans the raw data, calculates headline KPIs, and examines how sales vary by product category, fat content, outlet size, outlet location tier and outlet establishment year.
 
-## Table of Contents
-
-- [Project Overview](#project-overview)
-- [Problem Statement and Objectives](#problem-statement-and-objectives)
-- [Dataset](#dataset)
-- [Tools and Technologies](#tools-and-technologies)
-- [Workflow](#workflow)
-- [Data Cleaning and Preprocessing](#data-cleaning-and-preprocessing)
-- [Exploratory Data Analysis](#exploratory-data-analysis)
-- [Key Findings](#key-findings)
-- [Visualizations](#visualizations)
-- [Recommendations](#recommendations)
-- [Project Structure](#project-structure)
-- [How to Run Locally](#how-to-run-locally)
-- [Skills Demonstrated](#skills-demonstrated)
-- [Limitations and Future Improvements](#limitations-and-future-improvements)
-- [Author](#author)
-
 ## Project Overview
 
 This project analyses 7,060 cleaned sales records (from 8,523 raw records) to understand which product categories and outlet types contribute most to sales. It covers data cleaning, KPI calculation, group-wise aggregation and chart-based analysis in a single Jupyter Notebook.
-
-**Headline KPIs (after cleaning)**
-
-| KPI | Value |
-|---|---|
-| Total Sales | 997,159.22 |
-| Average Sales per record | 141.24 |
-| Records analysed | 7,060 |
-| Average Rating | 3.97 |
-
-**Project files**
-
-- Notebook: [notebook/blinkit_sales_analysis.ipynb](notebook/blinkit_sales_analysis.ipynb)
-- PDF export of the notebook: [report/blinkit_sales_analysis_notebook_export.pdf](report/blinkit_sales_analysis_notebook_export.pdf)
 
 ## Problem Statement and Objectives
 
@@ -48,37 +14,6 @@ A retail business needs to know where its sales come from before deciding on sto
 2. Which product categories generate the most and the least sales?
 3. How do sales differ between Low Fat and Regular items?
 4. How do sales differ by outlet size, outlet location tier and outlet establishment year?
-
-## Dataset
-
-- **File:** `blinkit_data.csv`
-- **Source:** Not specified
-- **Size:** 8,523 rows and 12 columns (raw); 7,060 rows after cleaning
-- **Time period and currency of `Sales`:** Not specified
-- **Availability:** The dataset file is not included in this repository. See [data/README.md](data/README.md) for how to add it.
-
-| Column | Notes from the notebook |
-|---|---|
-| Item Identifier | Product ID (e.g. FDX32) |
-| Item Type | 16 categories, e.g. Fruits and Vegetables, Snack Foods, Household |
-| Item Fat Content | Raw data had 5 label variants (see cleaning section) |
-| Item Weight | Numeric; 1,463 missing values |
-| Item Visibility | Numeric; not analysed |
-| Outlet Identifier | Outlet ID (e.g. OUT049) |
-| Outlet Establishment Year | 8 distinct years after cleaning (2000 to 2022) |
-| Outlet Size | High, Medium, Small |
-| Outlet Location Type | Tier 1, Tier 2, Tier 3 |
-| Outlet Type | Present; not analysed |
-| Sales | Numeric sales value |
-| Rating | Numeric rating |
-
-## Tools and Technologies
-
-- Python
-- Pandas for cleaning and aggregation
-- Matplotlib for visualization
-- Jupyter Notebook
-- NumPy and Seaborn are imported in the notebook but not used in the analysis steps
 
 ## Workflow
 
@@ -99,6 +34,15 @@ A retail business needs to know where its sales come from before deciding on sto
 |---|---|
 | Regular, reg | Regular |
 | Low Fat, low fat, LF | Low Fat |
+
+**Headline KPIs (after cleaning)**
+
+| KPI | Value |
+|---|---|
+| Total Sales | 997,159.22 |
+| Average Sales per record | 141.24 |
+| Records analysed | 7,060 |
+| Average Rating | 3.97 |
 
 ## Exploratory Data Analysis
 
@@ -126,12 +70,27 @@ All figures are totals computed on the cleaned data of 7,060 rows. Percentages a
 
 | | |
 |---|---|
-| ![Sales by Fat Content](images/01_sales_by_fat_content_pie.png) | ![Sales by Item Type](images/02_sales_by_item_type_bar.png) |
+| ![Sales by Fat Content](01_sales_by_fat_content_pie.png) | ![Sales by Item Type](02_sales_by_item_type_bar.png) |
 | Sales by fat content | Sales by item type |
-| ![Sales by Outlet Size](images/04_sales_by_outlet_size.png) | ![Sales by Outlet Location Type](images/05_sales_by_outlet_location_type.png) |
+| ![Sales by Outlet Size](04_sales_by_outlet_size.png) | ![Sales by Outlet Location Type](05_sales_by_outlet_location_type.png) |
 | Sales by outlet size | Sales by outlet location type |
 
-![Sales by Outlet Establishment Year](images/03_sales_by_outlet_establishment_year.png)
+![Sales by Outlet Establishment Year](03_sales_by_outlet_establishment_year.png)
+
+## Tools and Technologies
+
+- Python
+- Pandas for cleaning and aggregation
+- Matplotlib for visualization
+- Jupyter Notebook
+- NumPy and Seaborn are imported in the notebook but not used in the analysis steps
+
+ **Project files**
+## Project Files
+
+- Jupyter Notebook: [View Python Analysis](PYTHON%20PROJECT%20-%20BLINKIT%20ANALYSIS.ipynb)
+- PDF Report: [View Blinkit Project Report](Blinkit%20Project.pdf)
+
 
 
 ## Author
